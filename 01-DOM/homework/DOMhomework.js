@@ -6,7 +6,7 @@ var toDoItems = [];
 // Usando querySelector seleccionar dicho span por su id ('createdBy') y luego usando innerHTML
 // agregar tu nombre al final del  texto actual. Ej: 'Aplicación creada por Franco'
 // Tu código acá:
-document.getElementById("createdBy").innerHTML =
+document.querySelector("#createdBy").innerHTML =
   "Aplicacíon creada por Carlos Rodriguez ";
 // Crear una clase denominada 'ToDo' cuyo constructor debe recibir un único parámetro del tipo string
 // con el nombre 'description' que será justamente la descripción del ToDo.
@@ -91,7 +91,7 @@ function buildToDos(toDos) {
 
 function displayToDos() {
   // Tu código acá:
-  var todo = document.getElementById("toDoContainer");
+  var todo = document.querySelector("#toDoContainer");
 
   todo.innerHTML = "";
   var array = buildToDos(toDoItems);
