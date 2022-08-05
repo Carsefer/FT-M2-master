@@ -175,10 +175,10 @@ nav ul {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 50%;
+  width: 40%;
   padding: 10px;
 }
-@media (max-width: 500px) {
+@media (max-width 500px) {
   nav ul {
     width: 100%;
   }
@@ -207,7 +207,7 @@ footer {
 .home .intro img {
   border-radius: 25px;
 }
-@media (max-width: 500px) {
+@media (max-width 500px) {
   .home .intro img {
     width: 100%;
   }
@@ -223,13 +223,13 @@ footer {
   border-radius: 20px;
   height: 100%;
 }
-@media (max-width: 500px) {
+@media (max-width 500px) {
   .home .music-images .tecnologia,
   .home .music-images .ondas {
     display: none;
   }
 }
-@media (max-width: 500px) {
+@media (max-width 500px) {
   .home .music-images .auricular {
     width: 100%;
   }
@@ -250,7 +250,7 @@ footer {
   display: flex;
   justify-content: center;
 }
-@media (max-width: 500px) {
+@media (max-width 500px) {
   .home .actual {
     display: flex;
     flex-direction: column-reverse;
@@ -262,7 +262,7 @@ footer {
 .home .actual .actual-text {
   width: 50%;
 }
-@media (max-width: 500px) {
+@media (max-width 500px) {
   .home .actual .actual-text {
     width: 90%;
   }
@@ -285,7 +285,7 @@ footer {
   background-color: #f6f6f6;
   color: #22283a;
 }
-@media (max-width: 500px) {
+@media (max-width 500px) {
   .home .actual .actual-text .btn {
     width: 100%;
     text-align: center;
@@ -295,7 +295,7 @@ footer {
   width: 46%;
   margin-left: 4%;
 }
-@media (max-width: 500px) {
+@media (max-width 500px) {
   .home .actual .actual-img {
     width: 100%;
   }

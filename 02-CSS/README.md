@@ -1,4 +1,4 @@
-![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
+[HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
 <table class="hide" width="100%" style='table-layout:fixed;'>
   <tr>
@@ -23,8 +23,8 @@
 
 En esta Lesson se verán los siguientes temas:
 
-* Frameworks CSS
-* CSS Preprocessors
+- Frameworks CSS
+- CSS Preprocessors
 
 ## Frameworks CSS
 
@@ -32,11 +32,11 @@ En primer lugar un 'Framework' es un marco de referencia o marco de trabajo que 
 
 Existen una gran variedad de Frameworks CSS pero entre los más utilizados en la actualidad se encuentran:
 
-* Bootstrap
-* Foundation
-* Bulma
-* Ulkit
-* Semantic UI
+- Bootstrap
+- Foundation
+- Bulma
+- Ulkit
+- Semantic UI
 
 ### Bootstrap
 
@@ -47,16 +47,16 @@ Por ejemplo supongamos que quisiéramos crear en nuestra página web un botón r
 ```html
 <!DOCTYPE html>
 <html>
-<style media="screen">
-  button {
-    color: white;
-    background-color: red;
-    border-radius: 5px;
-  }
-</style>
-<body>
-<button type="button">Click</button>
-</body>
+  <style media="screen">
+    button {
+      color: white;
+      background-color: red;
+      border-radius: 5px;
+    }
+  </style>
+  <body>
+    <button type="button">Click</button>
+  </body>
 </html>
 ```
 
@@ -68,24 +68,29 @@ Ahora bien, vamos a intentar lo mismo utilizando Bootstrap. Para ello necesitare
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-<style media="screen">
-  .buttonComun {
-    color: white;
-    background-color: red;
-    border-radius: 5px;
-  }
-</style>
-<body>
-<button type="button" class="buttonComun">Boton Común</button>
-<button class="btn btn-danger">Boton Bootstrap</button>
-</body>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style media="screen">
+    .buttonComun {
+      color: white;
+      background-color: red;
+      border-radius: 5px;
+    }
+  </style>
+  <body>
+    <button type="button" class="buttonComun">Boton Común</button>
+    <button class="btn btn-danger">Boton Bootstrap</button>
+  </body>
 </html>
 ```
 
-*Veamos que en el header se agrego un link hacía Bootstrap*
+_Veamos que en el header se agrego un link hacía Bootstrap_
 
 Veamos ahora como quedó nuestra página:
 ![alt text](/_src/assets/02-CSS/boton-bootstrap.png)
@@ -96,13 +101,13 @@ Para ver que esto no es magia, lo que está pasando por detrás es que existe un
 
 ```css
 .btn-danger {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545;
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
 }
 ```
 
-*Lo mismo sucede con la clase `btn`, le aporta a nuestro elemento más propiedades CSS*
+_Lo mismo sucede con la clase `btn`, le aporta a nuestro elemento más propiedades CSS_
 
 En la página de [Bootstrap](https://getbootstrap.com/) podrán encontrar muchos componentes que pueden reutilizar en sus páginas web.
 
@@ -116,9 +121,9 @@ Para poder determinar que una propiedad solo se aplique en función del tamaño 
 
 Supongamos que queremos modificar el color de fondo de la página web:
 
-* Negro para una pantalla de 600px o menos de ancho
-* Azul para una pantalla de entre 600px a 900px de ancho
-* Rojo para una pantalla de más de 900px de ancho
+- Negro para una pantalla de 600px o menos de ancho
+- Azul para una pantalla de entre 600px a 900px de ancho
+- Rojo para una pantalla de más de 900px de ancho
 
 ```css
 body {
@@ -144,7 +149,6 @@ El resultado obtenido sería el siguiente:
 
 <div style="text-align:center"><img src="/_src/assets/02-CSS/css-media-query.gif" alt="imagen"/></div>
 
-
 ##### Bootrstap
 
 Supongamos ahora que queremos cambiar la cantidad de columnas que se muestren en función de la pantalla para que nos queden cuatro columnas en pantallas grandes, dos en medianas y una en pequeñas:
@@ -160,32 +164,52 @@ Pero ahora vamos a ver como solucionar esto utilizando el Framework que explicam
 
 Bootstrap ya tiene integrado un sistema de grillas implementado a partir de flexbox que nos va a facilitar la tarea. Para ello utiliza cinco clases ya definidas:
 
-* .col- (extra small devices - menos de 576px)
-* .col-sm- (small devices - mayor o igual a 576px)
-* .col-md- (medium devices - mayor o igual a 768px)
-* .col-lg- (large devices - mayor o igual a 992px)
-* .col-xl- (xlarge devices - mayor o igual a 1200px)
+- .col- (extra small devices - menos de 576px)
+- .col-sm- (small devices - mayor o igual a 576px)
+- .col-md- (medium devices - mayor o igual a 768px)
+- .col-lg- (large devices - mayor o igual a 992px)
+- .col-xl- (xlarge devices - mayor o igual a 1200px)
 
 El sistema de grilla de Bootstrap permite colocar hasta una suma de 12 'espacios' por fila distribuyéndolos de la forma que se quiera, ya sea colocando 12 columnas de 1 'espacio', 2 columnas de 6 'espacios' o cualquier variante de combinaciones:
 
  <div style="text-align:center"><img alt="no-box" src="/_src/assets/02-CSS/bootstrap-col-grid.png" alt="imagen"/></div>
  <br>
 
-*También existe la opción de dejar que Bootrstap identifique la cantidad de columnas que hay y a partir de ello le asigne el mismo ancho a cada una hasta completar la totalidad de la fila (Siempre recordando que el máximo es de 12). Para ello se utiliza simplemente la clase `.col` en cada columna*
+_También existe la opción de dejar que Bootrstap identifique la cantidad de columnas que hay y a partir de ello le asigne el mismo ancho a cada una hasta completar la totalidad de la fila (Siempre recordando que el máximo es de 12). Para ello se utiliza simplemente la clase `.col` en cada columna_
 
 Utilizando simplemente esas clases podemos crear múltiples tipos de grillas que se adapten a nuestras pantallas.
 
 <div style="text-align:center"><img src="/_src/assets/02-CSS/bootstrap-grid.gif" alt="imagen"/></div>
 <br>
 
-*En el gif de arriba podemos ver como en función del ancho de la pantalla va cambiando la cantidad de columnas*
+_En el gif de arriba podemos ver como en función del ancho de la pantalla va cambiando la cantidad de columnas_
 
 ```html
 <div class="row">
-  <div class="col-12 col-sm-6 col-md-3" style="background-color:black; color:black;">.</div>
-  <div class="col-12 col-sm-6 col-md-3" style="background-color:orange; color:orange;">.</div>
-  <div class="col-12 col-sm-6 col-md-3" style="background-color:yellow; color:yellow;">.</div>
-  <div class="col-12 col-sm-6 col-md-3" style="background-color:green; color:green;">.</div>
+  <div
+    class="col-12 col-sm-6 col-md-3"
+    style="background-color:black; color:black;"
+  >
+    .
+  </div>
+  <div
+    class="col-12 col-sm-6 col-md-3"
+    style="background-color:orange; color:orange;"
+  >
+    .
+  </div>
+  <div
+    class="col-12 col-sm-6 col-md-3"
+    style="background-color:yellow; color:yellow;"
+  >
+    .
+  </div>
+  <div
+    class="col-12 col-sm-6 col-md-3"
+    style="background-color:green; color:green;"
+  >
+    .
+  </div>
 </div>
 ```
 
@@ -197,12 +221,12 @@ La documentación completa la pueden encontrar [acá](https://getbootstrap.com/d
 
 Estos son algunos de lo preprocesadores CSS más populares:
 
-* SASS
-* LESS
-* Stylus
-* PostCSS
+- SASS
+- LESS
+- Stylus
+- PostCSS
 
-*Si quieren jugar un poco con distintos preprocesadores [codepen](https://codepen.io/pen/) nos brinda un entorno de fácil configuración. En la configuración del panel de CSS podemos seleccionar el que queramos*
+_Si quieren jugar un poco con distintos preprocesadores [codepen](https://codepen.io/pen/) nos brinda un entorno de fácil configuración. En la configuración del panel de CSS podemos seleccionar el que queramos_
 
 ### LESS (Leaner Style Sheets)
 
@@ -215,27 +239,27 @@ LESS nos permite utilizar variables dentro de nuestro archivo de estilos para ev
 Ejemplo de código SCSS:
 
 ```less
-@color-fondo: #F55;
+@color-fondo: #f55;
 @width: 10px;
 @height: @width + 10px; /* También es posible realizar operaciones sobre las variables */
 
 h1 {
-   background-color: @color-fondo;
-   width: @width;
-   height: @height;
- }
+  background-color: @color-fondo;
+  width: @width;
+  height: @height;
+}
 ```
 
-*En este ejemplo estamos creando variables con un color y medidas determinadas que van a poder ser reutilizadas en distintos componentes y clases las veces que queramos*
+_En este ejemplo estamos creando variables con un color y medidas determinadas que van a poder ser reutilizadas en distintos componentes y clases las veces que queramos_
 
 Luego este código va a ser compilado en a un archivo CSS para que pueda ser interpretado por los navegadores por lo que el ejemplo anterior quedaría así:
 
 ```css
 h1 {
-   background-color: #F55;
-   width: 10px;
-   height: 20px;
- }
+  background-color: #f55;
+  width: 10px;
+  height: 20px;
+}
 ```
 
 Al igual que en otros lenguajes de programación, las variables tienen un scope determinado, primero se analiza si en el contexto actual se encuentra definida dicha variable y si no la encuentra la buscará en el scope padre.
@@ -315,7 +339,6 @@ LESS nos provee de ciertas funciones que nos permiten transformar colores, manip
 
 Ejemplo de utilización:
 
-
 ```less
 @base: #f04615;
 @width: 0.5;
@@ -329,7 +352,7 @@ Ejemplo de utilización:
 
 En este caso por un lado con la función `percentage` estamos convirtiendo el valor `0.5` en `5%` y por otro lado, con la función `saturate` estamos incrementando la saturación del color base en un 5%.
 
-*Para ver la documentación completa de las funciones disponibles ingresar [aquí](http://lesscss.org/functions/)*
+_Para ver la documentación completa de las funciones disponibles ingresar [aquí](http://lesscss.org/functions/)_
 
 ### Anidado
 
@@ -353,7 +376,7 @@ nav {
 }
 ```
 
-*En este caso estamos asignándole propiedades a los elementos `ul`, `li` y `a` que se encuentren dentro de un `nav`*
+_En este caso estamos asignándole propiedades a los elementos `ul`, `li` y `a` que se encuentren dentro de un `nav`_
 
 Los mismo puede realizarse con la directiva `@media`:
 
@@ -364,7 +387,7 @@ El siguiente código:
   width: 300px;
   @media (min-width: 768px) {
     width: 600px;
-    @media  (min-resolution: 192dpi) {
+    @media (min-resolution: 192dpi) {
       background-image: url(/img/retina2x.png);
     }
   }
@@ -422,9 +445,10 @@ body {
   color: red;
 }
 ```
+
 De esta forma en nuestro último archivo de estilos también vamos a poder contener las definiciones de "general.less".
 
-*Observen que no es necesario aclarar la extensión del archivo `general`, LESS automáticamente asume que es un archivo de estilos válido*
+_Observen que no es necesario aclarar la extensión del archivo `general`, LESS automáticamente asume que es un archivo de estilos válido_
 
 ### Mixins
 
@@ -464,7 +488,7 @@ Esto se va a traducir a codigo CSS quivalente a:
 }
 ```
 
-*Es decir lo que sucedió es que se inyectaron todas las propiedades definidas en el mixin dentro de la clase `danger` y `success`. También es posible utilizar ids como mixins (`#b();`)*
+_Es decir lo que sucedió es que se inyectaron todas las propiedades definidas en el mixin dentro de la clase `danger` y `success`. También es posible utilizar ids como mixins (`#b();`)_
 
 #### Parametros
 
@@ -486,7 +510,7 @@ Los mixin pueden recibir parámetros:
 }
 ```
 
-*Aquí lo que estamos haciendo es definir un mixin que recibe dos parámetros (color y width) que luego van a ser utilizados para definir el borde del elemento. Con ello podemos reutilizar el mixin simplemente llamándolo con diferentes colores o anchos como en el ejemplo que se le está dando un color azul y un borde de un pixel a los elementos con la clase `myArticle`*
+_Aquí lo que estamos haciendo es definir un mixin que recibe dos parámetros (color y width) que luego van a ser utilizados para definir el borde del elemento. Con ello podemos reutilizar el mixin simplemente llamándolo con diferentes colores o anchos como en el ejemplo que se le está dando un color azul y un borde de un pixel a los elementos con la clase `myArticle`_
 
 ##### Valores por defecto
 
@@ -528,7 +552,7 @@ Esto resultaría en:
 Por último también es posible, heredar/compartir las propiedades de un selector en otro. Esto es útil para aquellos casos en los que entre dos selectores comparten la mayor parte de los atributos pero tienen una o algunas pequeñas diferencias.
 
 ```less
-.button-basic  {
+.button-basic {
   border: none;
   padding: 15px 30px;
   text-align: center;
@@ -536,19 +560,19 @@ Por último también es posible, heredar/compartir las propiedades de un selecto
   cursor: pointer;
 }
 
-.button-report  {
+.button-report {
   &:extend(.button-basic);
   background-color: red;
 }
 
-.button-submit  {
+.button-submit {
   &:extend(.button-basic);
   background-color: green;
   color: white;
 }
 ```
 
-*En este caso el botón de report y de submit extienden las propiedades del botón básico manteniendo todas sus propiedades pero agregándole algunas más que son propias de ellas*
+_En este caso el botón de report y de submit extienden las propiedades del botón básico manteniendo todas sus propiedades pero agregándole algunas más que son propias de ellas_
 
 Con esto cubrimos la mayor parte de las funcionalidades agregadas por LESS pero existen otras que para aquel que le interese indagar aun más sobre este tema puede acceder a la documentación oficial [aquí](http://lesscss.org/)
 
