@@ -1,0 +1,9 @@
+.cuadro input {
+  border-radius: 5px;
+  background-color: grey solid 1px;
+}
+
+.cuadro button {
+  border-radius: 5px;
+  background-color: antiquewhite;
+}

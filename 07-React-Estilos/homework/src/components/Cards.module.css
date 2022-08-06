@@ -1,0 +1,7 @@
+.cuadr {
+  display: flex;
+  flex-flow: row;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 40%;
+}
