@@ -1,0 +1,13 @@
+.barra {
+  display: flex;
+  justify-content: center;
+  margin-top: -30px;
+}
+.xos {
+  display: flex;
+  justify-content: start;
+}
+
+.nav {
+  border: solid 10px;
+}

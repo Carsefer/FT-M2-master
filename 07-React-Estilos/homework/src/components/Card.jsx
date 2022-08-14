@@ -11,11 +11,11 @@ export default function Card(props) {
       <div className={a.infoCuadro}>
         <div>
           <h5>Min</h5>
-          <p>{props.min}</p>
+          <p>{Math.round(props.min / 10)}°</p>
         </div>
         <div>
           <h5>Max</h5>
-          <p>{props.max}</p>
+          <p>{Math.round(props.max / 10)}°</p>
         </div>
         <div>
           <img
